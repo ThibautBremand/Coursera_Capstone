@@ -5,8 +5,7 @@ This project is related to the **IBM Data Science Professional Certificate** :
 https://www.coursera.org/specializations/ibm-data-science-professional-certificate  
 
 **Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
-https://nbviewer.jupyter.org.  
-Just paste the Github notebook link into nbviewer.  
+https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/Toronto_Neighbourhood_Clustering.ipynb   
 
 ## Toronto's Neighbourhoods Clustering using K-means. 
 The **Toronto_Neighbourhood_Clustering** notebook applies a k-means algorithm onto the list of all Toronto's neighbourhoods, in order to visualise differences between neighbourhoods within the city of Toronto.  
