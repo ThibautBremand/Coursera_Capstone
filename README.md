@@ -40,7 +40,7 @@ The clustering is made using the demographic data of Toronto, made available by 
 
 This dataset gives demographic data by **city areas**, which differ a bit from the neighbourhoods we scraped from Wikipedia. That's why we will be talking about city areas and not neighbourhoods in this notebook.  
 
-**Method :** :
+**Method :**
 - The list of city areas is retrieved from the **Toronto Open Data CSV file**.
 - Each city area's coordinated are retrieved using **Geocoder**.
 - The demographic data for each city area also comes from the **Toronto Open Data CSV file**.
