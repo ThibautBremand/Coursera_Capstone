@@ -51,3 +51,8 @@ This dataset gives demographic data by **city areas**, which differ a bit from t
 - For each interesting cluster (for example, if we want to open a Chinese restaurant, we will take clusters with a lot of Chinese people living in), we will count the number of existing restaurants by area, using **FoursquareAPI**.
 - We assume that the areas with the lowest number of existing restaurants of the same category within these clusters are the top spots to open the restaurant.
 - We display the top spots on a map using **Folium**.
+
+
+## Author : Thibaut BREMAND  
+- thibaut.bremand [at] gmail.com
+- https://github.com/ThibautBremand
