@@ -4,14 +4,14 @@ IBM Data Science Professional Certificate - Capstone project : Battle of the Nei
 This project is related to the **IBM Data Science Professional Certificate** :  
 https://www.coursera.org/specializations/ibm-data-science-professional-certificate  
 
-**Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
-https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/Toronto_Neighbourhood_Clustering.ipynb   
-
 # Toronto's Neighbourhoods Clustering using K-means.  
 We apply a **K-Means algorithm** onto the list of all Toronto's neighbourhoods, in order to visualise differences between neighbourhoods within the city of Toronto.  
 
 ## 1/ Clustering Neighbourhoods by venues categories
-### Use case : I want to find the best neighbourhood to live in  
+### Use case : I want to find the best neighbourhood to live in 
+
+**Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
+https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/Toronto_Neighbourhood_Clustering.ipynb   
 
 **Context :** When you want to live in a city, you may be looking for a neighbourhood regarding its types of venues. 
 - For example, **if you want to go to the park everyday, you will be likely to live in a neighbourhood that containts a lot of parks**. If you love coffee shops, you may want to live in a neighbourhood that containts a lot of coffee shops.  
@@ -30,6 +30,9 @@ With this clustering method, we can see neighbourhoods that are similar using th
 
 ## 2/ Clustering Neighbourhoods by demographic data
 ### Use case : I want to find the best area to open my new restaurant  
+
+**Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
+https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/2-Toronto_Clustering_By_Ethnic_Origins.ipynb    
 
 **Context :** This time, we will cluster the city of Toronto by demographic data, and especially by Ethnic origins, in order to find the best places to open a new restaurant.  
 - If, for example, **you want to open a new chinese restaurant in Toronto, you will be looking for areas where a lot of people of Chinese ethnic origins live**, so you will be sure that people will be interested by your restaurant nearby.  
