@@ -22,6 +22,8 @@ In order to count the number of existing restaurants of the same type in a neigh
 
 #### 2.Data  
 
+*2.1 - Demographic data from the City of Toronto's open data*  
+
 The list of neighbourhoods, and the demographic data associated to each neighbourhood, has been made available by the city of Toronto here :  
 - https://www.toronto.ca/ext/open_data/catalog/data_set_files/2016_neighbourhood_profiles.csv  
 
@@ -67,3 +69,100 @@ We can see :
 - We have the **name of each neighbourhood** in each column name (starting at position 6)
 - We have the **name of each ethnic origin** in the Characteristic column
 - The **number of people living in each neighbourhood**, associated to each ethnic origin name.
+
+*2.2 - List of venues by neighbourhood using the FoursquareAPI*
+
+In order to obtain the list of venues, and especially the list of restaurants with the same type as the one we want to open, we are going to request FoursquareAPI with an Explore query.  
+The documentation for the Explore query can be found here :
+- https://developer.foursquare.com/docs/api/venues/explore  
+
+Here is an example of a place in a specific neighbourhood retrieved from a FoursquareAPI call :
+
+```json
+"response": {
+  "headerLocation": "Lawrence Park South",
+  "headerFullLocation": "Lawrence Park South, Toronto",
+  "headerLocationGranularity": "neighborhood",
+  "totalResults": 5,
+  "suggestedBounds": {
+  "ne": {
+  "lat": 43.71824100630001,
+  "lng": -79.41042043977797
+  },
+  "sw": {
+  "lat": 43.705640993699994,
+  "lng": -79.42781956022205
+  }
+  },
+  "groups": [
+    {
+      "type": "Recommended Places",
+      "name": "recommended",
+      "items": [
+        {
+          "reasons": {
+            "count": 0,
+            "items": [
+              {
+                "summary": "Ce site est populaire",
+                "type": "general",
+                "reasonName": "globalInteractionReason"
+              }
+            ]
+          },
+          "venue": {
+            "id": "5bbc5b610d173f002c4148f4",
+            "name": "Wooden Woodworking Canada Inc.",
+            "location": {
+              "address": "22 Melham Ct, #1",
+              "lat": 43.71708562332913,
+              "lng": -79.41977977752686,
+              "labeledLatLngs": [
+                {
+                  "label": "display",
+                  "lat": 43.71708562332913,
+                  "lng": -79.41977977752686
+                }
+              ],
+              "distance": 575,
+              "postalCode": "M1B 2T7",
+              "cc": "CA",
+              "city": "Scarborough",
+              "state": "ON",
+              "country": "Canada",
+              "formattedAddress": [
+                "22 Melham Ct, #1",
+                "Scarborough ON M1B 2T7",
+                "Canada"
+              ]
+            },
+            "categories": [
+              {
+                "id": "545419b1498ea6ccd0202f58",
+                "name": "Service à domicile",
+                "pluralName": "Réparations et services à domicile",
+                "shortName": "Services à domicile",
+                "icon": {
+                "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/hardware_",
+                "suffix": ".png"
+              },
+              "primary": true
+              }
+            ],
+            "photos": {
+            "count": 0,
+            "groups": []
+            }
+          },
+          "referralId": "e-0-5bbc5b610d173f002c4148f4-0"
+        },
+      ]
+    }
+  ]
+}
+```
+
+We can see : 
+- The place comes from the *Lawrence Park South* : **headerLocation tag**
+- The name of the place is *Wooden Woodworking Canada Inc.* : **Group -> Items -> Venue -> Name tag**
+- The category of the place is *Service à domicile* (french translation for Home service) : **Group -> Items -> Venue -> Categories -> Name tag**
