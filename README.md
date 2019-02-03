@@ -11,7 +11,7 @@ We apply a **K-Means algorithm** onto the list of all Toronto's neighbourhoods, 
 ### Use case : I want to find the best neighbourhood to live in 
 
 **Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
-https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/Toronto_Neighbourhood_Clustering.ipynb   
+https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/1-Toronto_Clustering_By_Venues_Categories.ipynb 
 
 **Context :** When you want to live in a city, you may be looking for a neighbourhood regarding its types of venues. 
 - For example, **if you want to go to the park everyday, you will be likely to live in a neighbourhood that containts a lot of parks**. If you love coffee shops, you may want to live in a neighbourhood that containts a lot of coffee shops.  
