@@ -77,6 +77,8 @@ In order to obtain the list of venues, and especially the list of restaurants wi
 The documentation for the Explore query can be found here :
 - https://developer.foursquare.com/docs/api/venues/explore  
 
+We query FoursquareAPI suplying the neighbourhood's information (coordinates calculated with the **Geocoder** package), the radius of scan, and the limit of number of venues we want to retrieve.  
+
 Here is an example of a place in a specific neighbourhood retrieved from a FoursquareAPI call :
 
 ```json
