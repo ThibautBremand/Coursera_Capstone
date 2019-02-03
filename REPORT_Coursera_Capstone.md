@@ -13,9 +13,9 @@ This project is about **finding the best neighbourhoods in the city of Toronto t
 
 When you look for the best place to open a new restaurant in a city like Toronto, **you have to gauge people's taste in each neighbourhood of the city**. You will then know in what neighbourhood of the city people will likely come and spend money in your restaurant.
 
-A good way to gauge people's taste in a specific area is to **look into the demographic data of this area**. For example, areas with a mojority of chinese people would be good for chinese restaurants, and areas with a mojority of italian people would be good for opening an italian restaurant, etc.  
+A good way to gauge people's taste in a specific area is to **look into the demographic data of this area**. For example, areas with a mojority of chinese people would be good for chinese restaurants, and areas with a majority of italian people would be good for opening an italian restaurant, etc.  
 
-With this kind of demographic data associated with different neighbourhood of Toronto, we can cluster neighbourhoods by demographic data. Thus, we will be able to distinguish the areas where a lot of chinese people live, the areas where a lot of italian people live, and so on, based on the clustering.  
+With this kind of demographic data associated with different neighbourhoods of Toronto, **we can cluster neighbourhoods by demographic data**. Thus, we will be able to distinguish the areas where a lot of chinese people live, the areas where a lot of italian people live, and so on, based on the clustering.  
 
 #### 1.2 - Find the best neighbourhoods within a cluster to open the restaurant
 
