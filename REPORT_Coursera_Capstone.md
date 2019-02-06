@@ -169,3 +169,18 @@ We can see :
 - The place comes from the *Lawrence Park South* : **headerLocation tag**
 - The name of the place is *Wooden Woodworking Canada Inc.* : **Group -> Items -> Venue -> Name tag**
 - The category of the place is *Service à domicile* (english translation : Home service) : **Group -> Items -> Venue -> Categories -> Name tag**
+
+
+### 3.Methodology 
+
+As we previously saw, we use the following datasets :
+
+- A list of neighbourhoods' general information (Neighbourhood name, Number, and coordinates calculated using the Geocoder package)
+- A list of neighbourhoods' demographic data, with its number of people of each ethnic origin living in
+
+We start by displaying the map of the city of Toronto using the Folium package. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the perimeter of the data we are going to analyse in our project. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city.  
+
+Then, we find out what are the top most common ethnic origins for each neighbourhood. This will allow us to perform a clustering based on this demographic data.  
+
+For the clustering, we use a K-Means algorithm. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc. where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown.  
+Also, K-Means is one of the simmplest clustering algorithm to implement and to run, and is less time consuming that more complex algorithms. 
