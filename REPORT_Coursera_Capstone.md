@@ -180,10 +180,21 @@ As we previously saw, we use the following datasets :
 
 #### 3.1 - Data analysis
 
-A good way to start is to display each neighbourhood on a map of the city of Toronto, in order to check if the dataset with the list of neighbourhoods is complete and covers the whole city.  
+A good way to start is to display each neighbourhood on a map of the city of Toronto, in order to check if the dataset with the list of neighbourhoods is complete and covers the whole city. In order to draw each neighbourhood over the map of Toronto, we need the neighbourhoods' coordinates.  
+
+As we saw, the neighbourhoods' coordinates are not available in the **Neighbourhood information data** dataset. So we are going to retrieve them using the **Geocoder** package. We then store each neighbourhood's coordinates into a dataframe, like this :  
+
+|CDN                        |City_Area                  |Latitude                   |Longitude                  |
+|---------------------------|---------------------------|---------------------------|---------------------------|
+|129|Agincourt North|43.80930|-79.26707|
+|128|Agincourt South-Malvern West|43.78735|-79.26941
+|20|Alderwood|43.60496|-79.54116
+|95|Annex|43.66936|-79.40280
+|42|Banbury-Don Mills|43.74041|-79.34852
+
 The map of the city is displayed using the **Folium package**. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the position of each neighbourhood in our dataset. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city (no missing neighbourhood).  
 
-Then, we find out what are the top most common ethnic origins for each neighbourhood. We do this by counting the number of occurrences of each ethnic origin for each neighbourhood.  
+Then, we find out what are the top most common ethnic origins for each neighbourhood. We do this by counting the number of occurrences of each ethnic origin for each neighbourhood, and sorting the ethnic origins by number of occurence descending.  
 
 Here are two examples of neighbourhoods, with their top 5 most common ethnic origins of habitants :  
 
@@ -214,6 +225,4 @@ This will allow us to perform a clustering based on demographic data.
 For the clustering, we use a **K-Means algorithm**. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc... where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown.  
 Also, K-Means is one of the simplest clustering algorithm to implement and to run, and is less time consuming than other, more complex algorithms.  
 
-Once the clustering is done, we can visualise the clusters on a Folium map. We display each neighbourhood on the map, but they will be coloured depending upon the cluster they have been categorised into.  
-
-
+Once the clustering is done, we can visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
