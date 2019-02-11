@@ -175,12 +175,45 @@ We can see :
 
 As we previously saw, we use the following datasets :
 
-- A list of neighbourhoods' general information (Neighbourhood name, Number, and coordinates calculated using the Geocoder package)
-- A list of neighbourhoods' demographic data, with its number of people of each ethnic origin living in
+- A list of general information about the neighbourhoods (Neighbourhood name, Number, and coordinates calculated using the Geocoder package)
+- A list of demographic data about the neighbourhoods, with the number of people of each ethnic origin living in these neighbourhoods
 
-We start by displaying the map of the city of Toronto using the Folium package. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the perimeter of the data we are going to analyse in our project. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city.  
+#### 3.1 - Data analysis
 
-Then, we find out what are the top most common ethnic origins for each neighbourhood. This will allow us to perform a clustering based on this demographic data.  
+A good way to start is to display each neighbourhood on a map of the city of Toronto, in order to check if the dataset with the list of neighbourhoods is complete and covers the whole city.  
+The map of the city is displayed using the **Folium package**. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the position of each neighbourhood in our dataset. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city (no missing neighbourhood).  
 
-For the clustering, we use a K-Means algorithm. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc. where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown.  
-Also, K-Means is one of the simmplest clustering algorithm to implement and to run, and is less time consuming that more complex algorithms. 
+Then, we find out what are the top most common ethnic origins for each neighbourhood. We do this by counting the number of occurrences of each ethnic origin for each neighbourhood.  
+
+Here are two examples of neighbourhoods, with their top 5 most common ethnic origins of habitants :  
+
+**Agincourt North**
+
+|Origin                     |Count                      |
+|---------------------------|---------------------------|
+|Chinese|16950.0|
+|Sri Lankan|2230.0|
+|East Indian|2090.0|
+|Filipino|1465.0|
+|Canadian|1295.0|
+
+**Alderwood**
+
+|Origin                     |Count                      |
+|---------------------------|---------------------------|
+|English     |2320.0|
+|Canadian    |2245.0|
+|Irish       |1900.0|
+|Scottish    |1720.0|
+|Italian     |1275.0|
+
+This will allow us to perform a clustering based on demographic data.  
+
+#### 3.2 - Machine learning algorithm used
+
+For the clustering, we use a **K-Means algorithm**. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc... where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown.  
+Also, K-Means is one of the simplest clustering algorithm to implement and to run, and is less time consuming than other, more complex algorithms.  
+
+Once the clustering is done, we can visualise the clusters on a Folium map. We display each neighbourhood on the map, but they will be coloured depending upon the cluster they have been categorised into.  
+
+
