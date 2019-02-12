@@ -225,4 +225,11 @@ This will allow us to perform a clustering based on demographic data.
 For the clustering, we use a **K-Means algorithm**. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc... where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown.  
 Also, K-Means is one of the simplest clustering algorithm to implement and to run, and is less time consuming than other, more complex algorithms.  
 
+As we can see, the number of occurences in the demographic data is a numerical value. This means that we can directly use this data for the clustering, we don't need to use any One Hot Encoding.  
+
+In order to determine the best number of clusters for our dataset, which is the optimal K for our K-means algorithm, we are going to use the **Elbow method** as described here :  
+https://blog.cambridgespark.com/how-to-determine-the-optimal-number-of-clusters-for-k-means-clustering-14f27070048f  
+
+The Elbow method is a method to find the most appropriate number of clusters in a dataset, by **running several K-means algorithm and comparing the sum of squared distances of samples to the nearest cluster centre**. The more the sum of squared distance is, the further the datapoints are globally from their cluster centre. But we don't have to set K too high, as if K is set to the number of datapoints, then each sample will form its own cluster meaning sum of squared distances equals zero, which is not a good clustering.  
+
 Once the clustering is done, we can visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
