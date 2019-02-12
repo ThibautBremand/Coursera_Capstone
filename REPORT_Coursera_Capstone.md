@@ -232,4 +232,13 @@ https://blog.cambridgespark.com/how-to-determine-the-optimal-number-of-clusters-
 
 The Elbow method is a method to find the most appropriate number of clusters in a dataset, by **running several K-means algorithm and comparing the sum of squared distances of samples to the nearest cluster centre**. The more the sum of squared distance is, the further the datapoints are globally from their cluster centre. But we don't have to set K too high, as if K is set to the number of datapoints, then each sample will form its own cluster meaning sum of squared distances equals zero, which is not a good clustering.  
 
-Once the clustering is done, we can visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
+Once the clustering is done, we obtain a dataset like this :
+
+|CDN|City_Area|Latitude|Longitude|Cluster Labels|1st Most Common Origin|2nd Most Common Origin|3rd Most Common Origin|4th Most Common Origin|5th Most Common Origin|6th Most Common Origin|7th Most Common Origin|8th Most Common Origin|9th Most Common Origin|10th Most Common Origin|
+|---|---------|--------|---------|--------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|-----------------------|
+|129|Agincourt North	|43.80930	|-79.26707	|3	|Chinese	|Sri Lankan	|East Indian	|Filipino	|Canadian	|English	|Tamil	|Jamaican	|Scottish	|Irish|
+|20	|Alderwood	|43.60496	|-79.54116	|0	|English	|Canadian	|Irish	|Scottish	|Italian	|Polish	|German	|French	|Ukrainian	|Portuguese|
+
+We have the CDN number, the name of the neighbourhood, the coordinates, the cluster label obtained by the K-means algorithm, and the top most common ethnic origins by neighbourhood.  
+
+We can then visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
