@@ -13,7 +13,7 @@ This project is about **finding the best neighbourhoods in the city of Toronto t
 
 When you look for the best place to open a new restaurant in a city like Toronto, **you have to gauge people's taste in each neighbourhood of the city**. You will then know in what neighbourhood of the city people will likely come and spend money in your restaurant.
 
-A good way to gauge people's taste in a specific area is to **look into the demographic data of this area**. For example, areas with a mojority of chinese people would be good for chinese restaurants, and areas with a majority of italian people would be good for opening an italian restaurant, etc.  
+A good way to gauge people's taste in a specific area is to **look into the demographic data of this area**. For example, areas with a majority of chinese people would be good for chinese restaurants, and areas with a majority of italian people would be good for opening an italian restaurant, etc.  
 
 With this kind of demographic data associated with different neighbourhoods of Toronto, **we can cluster neighbourhoods by demographic data**. Thus, we will be able to distinguish the areas where a lot of chinese people live, the areas where a lot of italian people live, and so on, based on the clustering.  
 
@@ -180,7 +180,7 @@ As we previously saw, we use the following datasets :
 
 #### 3.1 - Data analysis
 
-A good way to start is to display each neighbourhood on a map of the city of Toronto, in order to check if the dataset with the list of neighbourhoods is complete and covers the whole city. In order to draw each neighbourhood over the map of Toronto, we need the neighbourhoods' coordinates.  
+A good way to start our analysis is to draw each neighbourhood over the map of the city of Toronto, in order to check if the dataset with the list of neighbourhoods is complete and covers the whole city. For that, we need each neighbourhood' coordinates.  
 
 As we saw, the neighbourhoods' coordinates are not available in the **Neighbourhood information data** dataset. So we are going to retrieve them using the **Geocoder** package. We then store each neighbourhood's coordinates into a dataframe, like this :  
 
@@ -194,9 +194,9 @@ As we saw, the neighbourhoods' coordinates are not available in the **Neighbourh
 
 The map of the city is displayed using the **Folium package**. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the position of each neighbourhood in our dataset. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city (no missing neighbourhood).  
 
-Then, we find out what are the top most common ethnic origins for each neighbourhood. We do this by counting the number of occurrences of each ethnic origin for each neighbourhood, and sorting the ethnic origins by number of occurence descending.  
+Once the map with the neighbourhoods is displayed, we need to find out what are the top most common ethnic origins for each neighbourhood, in order to prepare our data for clustering by demographic data. We do this by counting the number of occurrences of each ethnic origin for each neighbourhood, and sorting the ethnic origins by number of occurence descending.  
 
-Here are two examples of neighbourhoods, with their top 5 most common ethnic origins of habitants :  
+Here are two examples of neighbourhoods, with their top 5 most common ethnic origins of habitants, sorted by count descending :  
 
 **Agincourt North**
 
@@ -222,7 +222,7 @@ This will allow us to perform a clustering based on demographic data.
 
 #### 3.2 - Machine learning algorithm used
 
-For the clustering, we use a **K-Means algorithm**. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc... where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown.  
+For the clustering, we use a **K-Means algorithm**. I chose to use a K-Means algorithm, as it is one on the most used algorithm for unsupervised learning and clustering. It is typically used for scenarios like understanding the population demomgraphics, market segmentation, social media trends, anomaly detection, etc... where the clusters are unknown to begin with. It is exactly our scenario, as we want to understand how the neighbourhoods of Toronto are segmented, and the clusters to begin with are unknown in this situation.  
 Also, K-Means is one of the simplest clustering algorithm to implement and to run, and is less time consuming than other, more complex algorithms.  
 
 As we can see, the number of occurences in the demographic data is a numerical value. This means that we can directly use this data for the clustering, we don't need to use any One Hot Encoding.  
