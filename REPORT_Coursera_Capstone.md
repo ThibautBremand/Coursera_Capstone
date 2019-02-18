@@ -242,3 +242,24 @@ Once the clustering is done, we obtain a dataset like this :
 We have the CDN number, the name of the neighbourhood, the coordinates, the cluster label obtained by the K-means algorithm, and the top most common ethnic origins by neighbourhood.  
 
 We can then visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
+
+
+### 4.Discussion  
+
+We obtain the following results :  
+
+The **Cluster 0** regroups areas higly habited by **European and Canadian people**.
+We can see English, Italian, Portuguese, French people ...  
+Most of them are positioned in almost all the south of Toronto, and in the downtown.  
+
+For example :  
+
+|CDN|	City_Area	|Latitude	|Longitude	|Cluster Labels|	1st Most Common Origin|	2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin|	5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin|
+|---|-----------|---------|-----------|-------------|---------------------------|----------------------|------------------------|------------------|---------------------|-------------------------------|------------------------------|--------------------|------------------|-------------------------|
+|2	|20|	Alderwood	|43.604960	|-79.541160|	0	|English	|Canadian	|Irish	|Scottish	|Italian	|Polish	|German|	French|	Ukrainian	|Portuguese|
+|17|	57|	Broadview North	|43.689370	|-79.354290	|0	|English	|Irish	|Scottish	|Greek	|Canadian	|French	|German	|Chinese	|Filipino|	Serbian|
+|40	|11	|Eringate-Centennial-West Deane|	43.661910	|-79.577380	|0	|Canadian	|English|	Italian	|Irish	|Scottish	|Ukrainian	|Polish	|German	|Chinese	|Portuguese|
+|44|	101|	Forest Hill South|43.694310|	-79.416100	|0	|Polish	|Canadian	|Russian	|English	|Scottish	|Irish	|Jewish	|German	|French	|Chinese|
+|56	|106	|Humewood-Cedarvale	|43.689420	|-79.426980	|0	|Canadian	|English	|Polish	|Scottish	|Irish	|Filipino	|Russian	|German	|Italian	|Jewish|
+
+This cluster would interest anyone which wants to open a **european oriented restaurant**, for example an italian or a french restaurant, as it contains the neighbourhoods with the strongest European tendency within their habitants.  
