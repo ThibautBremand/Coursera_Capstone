@@ -194,7 +194,7 @@ As we saw, the neighbourhoods' coordinates are not available in the **Neighbourh
 
 The map of the city is displayed using the **Folium package**. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the position of each neighbourhood in our dataset. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city (no missing neighbourhood).  
 
-![Toronto screenshot](/Toronto1.PNG?raw=true)
+![Toronto screenshot](images/Toronto1.PNG?raw=true)
 
 Once the map with the neighbourhoods is displayed, we need to find out what are the top most common ethnic origins for each neighbourhood, in order to prepare our data for clustering by demographic data.  
 **We do this by counting the number of occurrences of each ethnic origin for each neighbourhood, and sorting the ethnic origins by number of occurence descending.**  
@@ -235,6 +235,10 @@ https://blog.cambridgespark.com/how-to-determine-the-optimal-number-of-clusters-
 
 The Elbow method is a method to find the most appropriate number of clusters in a dataset, by **running several K-means algorithm and comparing the sum of squared distances of samples to the nearest cluster centre**. The more the sum of squared distance is, the further the datapoints are globally from their cluster centre. But we don't have to set K too high, as if K is set to the number of datapoints, then each sample will form its own cluster meaning sum of squared distances equals zero, which is not a good clustering.  
 
+![Elbow method](images/Elbow.PNG?raw=true) 
+
+We are going to use **K = 5**, as the elbow is higly visible for this value.  
+
 Once the clustering is done, we obtain a dataset like this :
 
 |CDN|City_Area|Latitude|Longitude|Cluster Labels|1st Most Common Origin|2nd Most Common Origin|3rd Most Common Origin|4th Most Common Origin|5th Most Common Origin|6th Most Common Origin|7th Most Common Origin|8th Most Common Origin|9th Most Common Origin|10th Most Common Origin|
@@ -246,7 +250,7 @@ We have the CDN number, the name of the neighbourhood, the coordinates, the clus
 
 We can then visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
 
-![Toronto screenshot with clusters](/Toronto2.PNG?raw=true)
+![Toronto screenshot with clusters](images//Toronto2.PNG?raw=true)
 
 
 ### 4.Discussion  
@@ -347,7 +351,7 @@ The cluster would interest anyone which wants to open an **english or irish pub*
 Let's say we want to open an irish pub. We are going to use the **cluster 4** in order to find the best neighbourhood for this will.  
 In order to analyse the competition for each neighbourhood, we are going to retrieve the list of existing venues of the type **pub**, in the neighbourhoods categorised as **cluster 4**. For this task, we use **FoursquareAPI**.  
 
-We can then build a dataframe as such (top 5 rows) :  
+We build a dataframe as such (top 5 rows which represent 5 venues with the Pub category) :  
 
 | CDN | Area Latitude | Area Longitude | Venue                    | Venue Latitude | Venue Longitude | Venue Category |
 |-----|---------------|----------------|--------------------------|----------------|-----------------|----------------|
@@ -356,3 +360,21 @@ We can then build a dataframe as such (top 5 rows) :
 | 75  | 43.66024      | -79.37868      | Churchmouse   & Firkin   | 43.664632      | -79.380406      | Pub            |
 | 62  | 43.68415      | -79.29911      | Grover   Pub and Grub    | 43.679181      | -79.297215      | Pub            |
 | 62  | 43.68415      | -79.29911      | Mullins   Irish Pub      | 43.680348      | -79.289370      | Pub            |
+
+We can then count the number of existing Pubs for each neighbourhood, and sort these neighbourhoods by count ascending :  
+
+|Count|CDN	|City_Area	|Latitude	|Longitude	|Cluster Labels	|1st Most Common Origin	|2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin	|5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin	|
+|---|-------|------|-----|-----|-----|----|------|-------|------|--------|---------|-------|--------|-------|--------|
+|  4  | 16  | Stonegate-Queensway                 | 43.63718 | -79.50058 | 4 |English  | Canadian | Irish    | Scottish | Polish   | Italian  | Ukrainian   | German  | French                        | Portuguese                    |
+|15 | 122 | Birchcliffe-Cliffside               | 43.69472 | -79.26460 | 4 | English  | Irish    | Canadian | Scottish | French   | German   | Chinese     | Italian | Filipino                      | British Isles origins; n.i.e. | 
+|21| 45  | Parkwoods-Donalda                   | 43.75613 | -79.32880 | 4  | Canadian | English  | Chinese  | Scottish | Irish    | Filipino | East Indian | German  | Jamaican                      | French                        | 
+|29 | 70  | South Riverdale                     | 43.65221 | -79.33820 | 4 | Chinese  | English  | Irish    | Scottish | Canadian | French   | German      | Italian | British Isles origins; n.i.e. | Polish                        | 
+|30 | 17  | Mimico (includes Humber Bay Shores) | 43.61729 | -79.49885 | 4 | English  | Canadian | Irish    | Scottish | Italian  | Polish   | Ukrainian   | German  | French                        | Chinese                       | 
+
+We assume that the **top 5 neighbourhoods** from this list represent the best places to open a new pub, as :  
+- the demographic data shows that people will likely come in this kind of venue in these neighbourhoods
+- the competition is limited in these neighbourhoods  
+
+We can draw these 5 neighbourhoods on the map of Toronto :  
+
+![Best places of a pub](images/Toronto3.PNG?raw=true)
