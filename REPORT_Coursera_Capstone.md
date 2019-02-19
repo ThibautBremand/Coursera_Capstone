@@ -259,7 +259,7 @@ We can then visualise the clusters on a Folium map. We display each neighbourhoo
 
 We obtain the following results :  
 
-##### 4.1.1 - Cluster 0 : European & Canadian
+##### 4.1.1 - Cluster 0 : European & Canadian (Red colour)
 
 The **Cluster 0** regroups areas higly habited by **European and Canadian people**.
 We can see English, Italian, Portuguese, French people ...  
@@ -277,7 +277,7 @@ For example :
 
 This cluster would interest anyone which wants to open a **european oriented restaurant**, for example an italian or a french restaurant, as it contains the neighbourhoods with the strongest European tendency within their habitants.  
 
-##### 4.1.2 - Cluster 1 : Asian
+##### 4.1.2 - Cluster 1 : Asian (Purple colour)
 
 The **Cluster 1** regroups areas higly habited **Chinese people, and people from others countries in Asia**.  
 We can see that most of them are positioned at the north of Toronto.  
@@ -294,7 +294,7 @@ For example :
 
 This cluster would interest anyone which wants to open an **asian restaurant**, for example a chinese restaurant, as it contains the neighbourhoods with the strongest asian tendency within their habitants.  
 
-##### 4.1.3 - Cluster 2 : Indian
+##### 4.1.3 - Cluster 2 : Indian (Dark green colour)
 
 The **Cluster 2** concentrates areas haghly habited by Indian people.  
 We can see that these areas are located at the edges of Toronto.  
@@ -311,7 +311,7 @@ For example :
 
 This cluster would interest anyone which wants to open an **indian restaurant**.   
 
-##### 4.1.4 - Cluster 3 : Chinese
+##### 4.1.4 - Cluster 3 : Chinese (Light green colour)
 
 The **Cluster 3** also regroups areas higly habited by asian people, the most common ethnic origin is Chinese.  
 We can see that most of them are positioned at the north east of Toronto, next to the cluster 1. This cluster is highly similar to the cluster 1.  
@@ -328,7 +328,7 @@ For example :
 
 This cluster would interest anyone which wants to open a **chinese restaurant**, or an asian restaurant in general.   
 
-##### 4.1.5 - Cluster 4 : Irish, Scottish & English
+##### 4.1.5 - Cluster 4 : Irish, Scottish & English (Yellow colour)
 
 The **Cluster 4** regroups areas higly habited by **English, Irish, Scottish and Canadian people**.  
 We can also see that there are a lot of people from other european countries as well, such as French, German, Polish, ...   
