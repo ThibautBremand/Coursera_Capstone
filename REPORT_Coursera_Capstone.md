@@ -248,6 +248,8 @@ We can then visualise the clusters on a Folium map. We display each neighbourhoo
 
 We obtain the following results :  
 
+#### 4.1 - Cluster 0 : European & Canadian
+
 The **Cluster 0** regroups areas higly habited by **European and Canadian people**.
 We can see English, Italian, Portuguese, French people ...  
 Most of them are positioned in almost all the south of Toronto, and in the downtown.  
@@ -263,3 +265,72 @@ For example :
 |56	|106	|Humewood-Cedarvale	|43.689420	|-79.426980	|0	|Canadian	|English	|Polish	|Scottish	|Irish	|Filipino	|Russian	|German	|Italian	|Jewish|
 
 This cluster would interest anyone which wants to open a **european oriented restaurant**, for example an italian or a french restaurant, as it contains the neighbourhoods with the strongest European tendency within their habitants.  
+
+#### 4.2 - Cluster 1 : Asian
+
+The **Cluster 1** regroups areas higly habited **Chinese people, and people from others countries in Asia**.  
+We can see that most of them are positioned at the north of Toronto.  
+
+For example :  
+
+|CDN|	City_Area	|Latitude	|Longitude	|Cluster Labels|	1st Most Common Origin|	2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin|	5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin|
+|---|-----------|---------|-----------|-------------|---------------------------|----------------------|------------------------|------------------|---------------------|-------------------------------|------------------------------|--------------------|------------------|-------------------------|
+| 127 | Bendale              | 43.75963 | -79.25739 | 1 | Chinese  | East   Indian | Filipino      | Canadian | English      | Scottish | Irish    | Sri   Lankan | Greek  | French   |
+| 47  | Don   Valley Village | 43.78552 | -79.35017 | 1 | Chinese  | Filipino      | East   Indian | Iranian  | English      | Canadian | Irish    | Scottish     | Korean | Armenian |
+| 126 | Dorset   Park        | 43.75533 | -79.27746 | 1 | Filipino | East   Indian | Chinese       | Canadian | Sri   Lankan | English  | Jamaican | Scottish     | Tamil  | Irish    |
+| 53  | Henry   Farm         | 43.77230 | -79.34087 | 1 | Chinese  | East   Indian | Filipino      | Iranian  | Canadian     | English  | Scottish | Irish        | Afghan | Korean   |
+| 48  | Hillcrest   Village  | 43.80303 | -79.35346 | 1 | Chinese  | East   Indian | Canadian      | Iranian  | Korean       | English  | Russian  | Scottish     | Polish | Irish    |
+
+This cluster would interest anyone which wants to open an **asian restaurant**, for example a chinese restaurant, as it contains the neighbourhoods with the strongest asian tendency within their habitants.  
+
+#### 4.3 - Cluster 2 : Indian
+
+The **Cluster 2** concentrates areas haghly habited by Indian people.  
+We can see that these areas are located at the edges of Toronto.  
+
+For example :  
+
+|CDN|	City_Area	|Latitude	|Longitude	|Cluster Labels|	1st Most Common Origin|	2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin|	5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin|
+|---|-----------|---------|-----------|-------------|---------------------------|----------------------|------------------------|------------------|---------------------|-------------------------------|------------------------------|--------------------|------------------|-------------------------|
+| 132 | Malvern                           | 43.80977 | -79.22084 | 2 | East Indian | Sri Lankan | Filipino   | Chinese  | Jamaican | Canadian | English  | Tamil      | Guyanese                      | Pakistani |
+| 2   | Mount Olive-Silverstone-Jamestown | 43.74721 | -79.58826 | 2 | East Indian | Iraqi      | Jamaican   | Canadian | Somali   | Italian  | Assyrian | Sri Lankan | Other African origins; n.i.e. | Ghanaian  |
+| 131 | Rouge                             | 43.80766 | -79.17405 | 2 | East Indian | Sri Lankan | Canadian   | Filipino | Jamaican | English  | Chinese  | Tamil      | Scottish                      | Irish     |
+| 1   | West Humber-Clairville            | 43.71451 | -79.59292 | 2 | East Indian | Jamaican   | Canadian   | Filipino | Italian  | Punjabi  | English  | Guyanese   | Chinese                       | Scottish  |
+| 137 | Woburn                            | 43.76730 | -79.22823 | 2 | East Indian | Canadian   | Sri Lankan | Chinese  | Filipino | English  | Irish    | Scottish   | Jamaican                      | Tamil     |
+
+This cluster would interest anyone which wants to open an **indian restaurant**.   
+
+#### 4.4 - Cluster 3 : Chinese
+
+The **Cluster 3** also regroups areas higly habited by asian people, the most common ethnic origin is Chinese.  
+We can see that most of them are positioned at the north east of Toronto, next to the cluster 1. This cluster is highly similar to the cluster 1.  
+
+For example :  
+
+|CDN|	City_Area	|Latitude	|Longitude	|Cluster Labels|	1st Most Common Origin|	2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin|	5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin|
+|---|-----------|---------|-----------|-------------|---------------------------|----------------------|------------------------|------------------|---------------------|-------------------------------|------------------------------|--------------------|------------------|-------------------------|
+| 129 | Agincourt North              | 43.80930 | -79.26707 | 3 | Chinese | Sri Lankan  | East Indian | Filipino    | Canadian | English  | Tamil    | Jamaican | Scottish   | Irish    |
+| 128 | Agincourt South-Malvern West | 43.78735 | -79.26941 | 3 | Chinese | East Indian | Filipino    | Sri Lankan  | Canadian | English  | Scottish | Jamaican | Italian    | Irish    |
+| 117 | L'Amoreaux                   | 43.79726 | -79.31220 | 3 | Chinese | East Indian | Canadian    | Sri Lankan  | Filipino | English  | Armenian | Jamaican | Scottish   | Irish    |
+| 130 | Milliken                     | 43.82280 | -79.27694 | 3 | Chinese | Sri Lankan  | East Indian | Filipino    | Canadian | Tamil    | Jamaican | English  | Vietnamese | Spanish  |
+| 51  | Willowdale East              | 43.77248 | -79.40039 | 3 | Chinese | Iranian     | Korean      | East Indian | English  | Canadian | Scottish | Irish    | Russian    | Italian  |
+
+This cluster would interest anyone which wants to open a **chinese restaurant**, or an asian restaurant in general.   
+
+#### 4.5 - Cluster 4 : Irish, Scottish & English
+
+The **Cluster 4** regroups areas higly habited by **English, Irish, Scottish and Canadian people**.  
+We can also see that there are a lot of people from other european countries as well, such as French, German, Polish, ...   
+Most of these neighbourhoods are positioned at the south and in the downtown of Toronto.  
+
+For example :  
+
+|CDN|	City_Area	|Latitude	|Longitude	|Cluster Labels|	1st Most Common Origin|	2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin|	5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin|
+|---|-----------|---------|-----------|-------------|---------------------------|----------------------|------------------------|------------------|---------------------|-------------------------------|------------------------------|--------------------|------------------|-------------------------|
+| 95  | Annex                               | 43.66936 | -79.40280 | 4 | English    | Irish   | Scottish | Canadian | German   | French  | Polish  | Chinese     | Italian  | Russian                       |
+| 122 | Birchcliffe-Cliffside               | 43.69472 | -79.26460 | 4 | English    | Irish   | Canadian | Scottish | French   | German  | Chinese | Italian     | Filipino | British Isles origins; n.i.e. |
+| 75  | Church-Yonge Corridor               | 43.66024 | -79.37868 | 4 | English    | Irish   | Scottish | Chinese  | Canadian | French  | German  | East Indian | Italian  | Polish                        |                 |
+| 62  | East End-Danforth                   | 43.68415 | -79.29911 | 4 | English    | Irish   | Scottish | Canadian | French   | German  | Chinese | Italian     | Polish   | British Isles origins; n.i.e. |
+| 88  | High Park North                     | 43.65767 | -79.46458 | 4 | English    | Irish   | Scottish | Canadian | German   | Polish  | French  | Ukrainian   | Italian  | Russian                       |  
+
+The cluster would interest anyone which wants to open an **english or irish pub**, or any UK/Ireland related type of restaurant.  
