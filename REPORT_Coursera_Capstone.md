@@ -251,9 +251,11 @@ We can then visualise the clusters on a Folium map. We display each neighbourhoo
 
 ### 4.Discussion  
 
+#### 4.1 - Clusters
+
 We obtain the following results :  
 
-#### 4.1 - Cluster 0 : European & Canadian
+##### 4.1.1 - Cluster 0 : European & Canadian
 
 The **Cluster 0** regroups areas higly habited by **European and Canadian people**.
 We can see English, Italian, Portuguese, French people ...  
@@ -271,7 +273,7 @@ For example :
 
 This cluster would interest anyone which wants to open a **european oriented restaurant**, for example an italian or a french restaurant, as it contains the neighbourhoods with the strongest European tendency within their habitants.  
 
-#### 4.2 - Cluster 1 : Asian
+##### 4.1.2 - Cluster 1 : Asian
 
 The **Cluster 1** regroups areas higly habited **Chinese people, and people from others countries in Asia**.  
 We can see that most of them are positioned at the north of Toronto.  
@@ -288,7 +290,7 @@ For example :
 
 This cluster would interest anyone which wants to open an **asian restaurant**, for example a chinese restaurant, as it contains the neighbourhoods with the strongest asian tendency within their habitants.  
 
-#### 4.3 - Cluster 2 : Indian
+##### 4.1.3 - Cluster 2 : Indian
 
 The **Cluster 2** concentrates areas haghly habited by Indian people.  
 We can see that these areas are located at the edges of Toronto.  
@@ -305,7 +307,7 @@ For example :
 
 This cluster would interest anyone which wants to open an **indian restaurant**.   
 
-#### 4.4 - Cluster 3 : Chinese
+##### 4.1.4 - Cluster 3 : Chinese
 
 The **Cluster 3** also regroups areas higly habited by asian people, the most common ethnic origin is Chinese.  
 We can see that most of them are positioned at the north east of Toronto, next to the cluster 1. This cluster is highly similar to the cluster 1.  
@@ -322,7 +324,7 @@ For example :
 
 This cluster would interest anyone which wants to open a **chinese restaurant**, or an asian restaurant in general.   
 
-#### 4.5 - Cluster 4 : Irish, Scottish & English
+##### 4.1.5 - Cluster 4 : Irish, Scottish & English
 
 The **Cluster 4** regroups areas higly habited by **English, Irish, Scottish and Canadian people**.  
 We can also see that there are a lot of people from other european countries as well, such as French, German, Polish, ...   
@@ -335,7 +337,22 @@ For example :
 | 95  | Annex                               | 43.66936 | -79.40280 | 4 | English    | Irish   | Scottish | Canadian | German   | French  | Polish  | Chinese     | Italian  | Russian                       |
 | 122 | Birchcliffe-Cliffside               | 43.69472 | -79.26460 | 4 | English    | Irish   | Canadian | Scottish | French   | German  | Chinese | Italian     | Filipino | British Isles origins; n.i.e. |
 | 75  | Church-Yonge Corridor               | 43.66024 | -79.37868 | 4 | English    | Irish   | Scottish | Chinese  | Canadian | French  | German  | East Indian | Italian  | Polish                        |                 |
-| 62  | East End-Danforth                   | 43.68415 | -79.29911 | 4 | English    | Irish   | Scottish | Canadian | French   | German  | Chinese | Italian     | Polish   | British Isles origins; n.i.e. |
-| 88  | High Park North                     | 43.65767 | -79.46458 | 4 | English    | Irish   | Scottish | Canadian | German   | Polish  | French  | Ukrainian   | Italian  | Russian                       |  
+|93	|Dovercourt-Wallace Emerson-Junction	|43.66604	|-79.43687	|4	|Portuguese	|English	|Canadian	|Irish	|Scottish	|Chinese	|Italian	|German	|French	|East Indian|
+| 62  | East End-Danforth                   | 43.68415 | -79.29911 | 4 | English    | Irish   | Scottish | Canadian | French   | German  | Chinese | Italian     | Polish   | British Isles origins; n.i.e. |                     |  
 
 The cluster would interest anyone which wants to open an **english or irish pub**, or any UK/Ireland related type of restaurant.  
+
+#### 4.2 - Analyse each neighbourhood's competition
+
+Let's say we want to open an irish pub. We are going to use the **cluster 4** in order to find the best neighbourhood for this will.  
+In order to analyse the competition for each neighbourhood, we are going to retrieve the list of existing venues of the type **pub**, in the neighbourhoods categorised as **cluster 4**. For this task, we use **FoursquareAPI**.  
+
+We can then build a dataframe as such (top 5 rows) :  
+
+| CDN | Area Latitude | Area Longitude | Venue                    | Venue Latitude | Venue Longitude | Venue Category |
+|-----|---------------|----------------|--------------------------|----------------|-----------------|----------------|
+| 95  | 43.66936      | -79.40280      | The   Madison Avenue Pub | 43.667947      | -79.403486      | Pub            |
+| 95  | 43.66936      | -79.40280      | Duke   of York           | 43.669186      | -79.397527      | Pub            |
+| 75  | 43.66024      | -79.37868      | Churchmouse   & Firkin   | 43.664632      | -79.380406      | Pub            |
+| 62  | 43.68415      | -79.29911      | Grover   Pub and Grub    | 43.679181      | -79.297215      | Pub            |
+| 62  | 43.68415      | -79.29911      | Mullins   Irish Pub      | 43.680348      | -79.289370      | Pub            |
