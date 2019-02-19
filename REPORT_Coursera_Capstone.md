@@ -194,7 +194,10 @@ As we saw, the neighbourhoods' coordinates are not available in the **Neighbourh
 
 The map of the city is displayed using the **Folium package**. On this map, we draw a blue circle for each neighbourhood, using the neighbourhoods' coordinates. It is a good way to visualise the position of each neighbourhood in our dataset. It also confirms that the different neighbourhoods are well distributed within the city, and that our dataset covers the whole city (no missing neighbourhood).  
 
-Once the map with the neighbourhoods is displayed, we need to find out what are the top most common ethnic origins for each neighbourhood, in order to prepare our data for clustering by demographic data. We do this by counting the number of occurrences of each ethnic origin for each neighbourhood, and sorting the ethnic origins by number of occurence descending.  
+![Toronto screenshot](/Toronto1.PNG?raw=true)
+
+Once the map with the neighbourhoods is displayed, we need to find out what are the top most common ethnic origins for each neighbourhood, in order to prepare our data for clustering by demographic data.  
+**We do this by counting the number of occurrences of each ethnic origin for each neighbourhood, and sorting the ethnic origins by number of occurence descending.**  
 
 Here are two examples of neighbourhoods, with their top 5 most common ethnic origins of habitants, sorted by count descending :  
 
@@ -242,6 +245,8 @@ Once the clustering is done, we obtain a dataset like this :
 We have the CDN number, the name of the neighbourhood, the coordinates, the cluster label obtained by the K-means algorithm, and the top most common ethnic origins by neighbourhood.  
 
 We can then visualise the clusters on a Folium map. We display each neighbourhood as a circle on the map, each circle will be coloured according to the cluster they have been categorised into.  
+
+![Toronto screenshot with clusters](/Toronto2.PNG?raw=true)
 
 
 ### 4.Discussion  
