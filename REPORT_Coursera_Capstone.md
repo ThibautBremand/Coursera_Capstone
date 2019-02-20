@@ -11,7 +11,7 @@ This project is about **finding the best neighbourhoods in the city of Toronto t
 
 #### 1.1 - Cluster Toronto neighbourhoods using demographic data 
 
-When you look for the best place to open a new restaurant in a city like Toronto, **you have to gauge people's taste in each neighbourhood of the city**. You will then know in what neighbourhood of the city people will likely come and spend money in your restaurant.
+When we look for the best place to open a new restaurant in a city like Toronto, **we have to gauge people's taste in each neighbourhood of the city**. We will then know in what neighbourhood of the city people will likely come and spend money in our new restaurant.
 
 A good way to gauge people's taste in a specific area is to **look into the demographic data of this area**. For example, areas with a majority of chinese people would be good for chinese restaurants, and areas with a majority of italian people would be good for opening an italian restaurant, etc.  
 
@@ -19,7 +19,7 @@ With this kind of demographic data associated with different neighbourhoods of T
 
 #### 1.2 - Find the best neighbourhoods within a cluster to open the restaurant
 
-Once the neighbourhoods have been categorised into clusters, and you've got a list of neighbourhoods where people living there would likely want to eat in the restaurant you want to open, **you need to find out in which neighbourhoods there is less competition**. It means that you have to find out **what neighbourhoods contain the lowest number of existing restaurants of the same type** as the one you want to open.  
+Once the neighbourhoods have been categorised into clusters, and we've got a list of neighbourhoods where people living there would likely want to eat in the restaurant we want to open, **we need to find out in which neighbourhoods there is less competition**. It means that we have to find out **what neighbourhoods contain the lowest number of existing restaurants of the same type** as the one we want to open.  
 
 In order to count the number of existing restaurants of the same type in a neighbourhood, we perform a **FoursquareAPI explore query**. Like that, we obtain the list of venues of each neighbourhood, and we can count the number of restaurants of each type.   
 
@@ -239,7 +239,7 @@ The Elbow method is a method to find the most appropriate number of clusters in 
 
 We are going to use **K = 5**, as the elbow is higly visible for this value.  
 
-Once the clustering is done, we obtain a dataset like this :
+Once the clustering is done, we obtain a dataset like this (example with two neighbourhoods from two different clusters) :
 
 |CDN|City_Area|Latitude|Longitude|Cluster Labels|1st Most Common Origin|2nd Most Common Origin|3rd Most Common Origin|4th Most Common Origin|5th Most Common Origin|6th Most Common Origin|7th Most Common Origin|8th Most Common Origin|9th Most Common Origin|10th Most Common Origin|
 |---|---------|--------|---------|--------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|-----------------------|
@@ -269,11 +269,11 @@ For example :
 
 |CDN|	City_Area	|Latitude	|Longitude	|Cluster Labels|	1st Most Common Origin|	2nd Most Common Origin	|3rd Most Common Origin	|4th Most Common Origin|	5th Most Common Origin	|6th Most Common Origin	|7th Most Common Origin	|8th Most Common Origin	|9th Most Common Origin	|10th Most Common Origin|
 |---|-----------|---------|-----------|-------------|---------------------------|----------------------|------------------------|------------------|---------------------|-------------------------------|------------------------------|--------------------|------------------|-------------------------|
-|2	|20|	Alderwood	|43.604960	|-79.541160|	0	|English	|Canadian	|Irish	|Scottish	|Italian	|Polish	|German|	French|	Ukrainian	|Portuguese|
-|17|	57|	Broadview North	|43.689370	|-79.354290	|0	|English	|Irish	|Scottish	|Greek	|Canadian	|French	|German	|Chinese	|Filipino|	Serbian|
-|40	|11	|Eringate-Centennial-West Deane|	43.661910	|-79.577380	|0	|Canadian	|English|	Italian	|Irish	|Scottish	|Ukrainian	|Polish	|German	|Chinese	|Portuguese|
-|44|	101|	Forest Hill South|43.694310|	-79.416100	|0	|Polish	|Canadian	|Russian	|English	|Scottish	|Irish	|Jewish	|German	|French	|Chinese|
-|56	|106	|Humewood-Cedarvale	|43.689420	|-79.426980	|0	|Canadian	|English	|Polish	|Scottish	|Irish	|Filipino	|Russian	|German	|Italian	|Jewish|
+|20|	Alderwood	|43.604960	|-79.541160|	0	|English	|Canadian	|Irish	|Scottish	|Italian	|Polish	|German|	French|	Ukrainian	|Portuguese|
+|	57|	Broadview North	|43.689370	|-79.354290	|0	|English	|Irish	|Scottish	|Greek	|Canadian	|French	|German	|Chinese	|Filipino|	Serbian|
+|11	|Eringate-Centennial-West Deane|	43.661910	|-79.577380	|0	|Canadian	|English|	Italian	|Irish	|Scottish	|Ukrainian	|Polish	|German	|Chinese	|Portuguese|
+|	101|	Forest Hill South|43.694310|	-79.416100	|0	|Polish	|Canadian	|Russian	|English	|Scottish	|Irish	|Jewish	|German	|French	|Chinese|
+|106	|Humewood-Cedarvale	|43.689420	|-79.426980	|0	|Canadian	|English	|Polish	|Scottish	|Irish	|Filipino	|Russian	|German	|Italian	|Jewish|
 
 This cluster would interest anyone which wants to open a **european oriented restaurant**, for example an italian or a french restaurant, as it contains the neighbourhoods with the strongest European tendency within their habitants.  
 
@@ -378,3 +378,12 @@ We assume that the **top 5 neighbourhoods** from this list represent the best pl
 We can draw these 5 neighbourhoods on the map of Toronto :  
 
 ![Best places of a pub](images/Toronto3.PNG?raw=true)
+
+
+### 5.Conclusion  
+
+In this project, we managed to cluster the city of Toronto using **demographic data by neighbourhoods**. This helps us identify which neighbourhoods are the mose adequate for opening a new restaurant of a specific type.  
+
+Then, we manage to **identify the neighbourhoods with the less competition** within these adequate neighbourhoods, in order to optimise the performance of this new business.  
+
+**Food service contractors** can use similar data analysis in order **to find the best spots to open a new restaurant**.  
