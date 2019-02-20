@@ -35,17 +35,17 @@ With this clustering method, we can see neighbourhoods that are similar using th
 https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/2-Toronto_Clustering_By_Ethnic_Origins.ipynb    
 
 **Context :** This time, we will cluster the city of Toronto by demographic data, and especially by Ethnic origins, in order to find the best places to open a new restaurant.  
-- If, for example, **you want to open a new chinese restaurant in Toronto, you will be looking for areas where a lot of people of Chinese ethnic origins live**, so you will be sure that people will be interested by your restaurant nearby.  
+- If, for example, **you want to open a new chinese restaurant in Toronto, you will be looking for areas where a lot of people of Chinese ethnic origins live**, so you will be sure that people living nearby will be interested in your new restaurant.  
 - Once you found out the areas with a lot of people with chinese ethnic origins, we assume that **you will be looking for the areas with the lower number of already existing chinese restaurants**. Thus, there will be less competition.  
 
-The clustering is made using the demographic data of Toronto, made available by the city of Toronto here :  
+The clustering is done using the demographic data of Toronto, made available by the city of Toronto here :  
 - https://www.toronto.ca/ext/open_data/catalog/data_set_files/2016_neighbourhood_profiles.csv
 
-This dataset gives demographic data by **city areas**, which differ a bit from the neighbourhoods we scraped from Wikipedia. That's why we will be talking about city areas and not neighbourhoods in this notebook.  
+This dataset gives demographic data by **city areas**, which differs a bit from the neighbourhoods we scraped from Wikipedia. That's why we will be talking sometimes about city areas and not neighbourhoods.  
 
 **Method :**
 - The list of city areas is retrieved from the **Toronto Open Data CSV file**.
-- Each city area's coordinated are retrieved using **Geocoder**.
+- Each city area's coordinates are retrieved using **Geocoder**.
 - The demographic data for each city area also comes from the **Toronto Open Data CSV file**.
 - The clustering is done using a **K-Means algorithm**.
 - For each interesting cluster (for example, if we want to open a Chinese restaurant, we will take clusters with a lot of Chinese people living in), we will count the number of existing restaurants by area, using **FoursquareAPI**.
