@@ -382,8 +382,8 @@ We can draw these 5 neighbourhoods on the map of Toronto :
 
 ### 5.Conclusion  
 
-In this project, we managed to cluster the city of Toronto using **demographic data by neighbourhoods**. This helps us identify which neighbourhoods are the mose adequate for opening a new restaurant of a specific type.  
+In this project, we managed to cluster the city of Toronto using **demographic data by neighbourhoods**. This helps us identify which neighbourhoods are the most adequate for opening a new restaurant of a specific type.  
 
-Then, we manage to **identify the neighbourhoods with the less competition** within these adequate neighbourhoods, in order to optimise the performance of this new business.  
+Then, we managed to **identify the neighbourhoods with the less competition** within these adequate neighbourhoods, in order to optimise the performance of this new business.  
 
 **Food service contractors** can use similar data analysis in order **to find the best spots to open a new restaurant**.  
