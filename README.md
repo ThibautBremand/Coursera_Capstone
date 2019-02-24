@@ -11,7 +11,7 @@ We apply a **K-Means algorithm** onto the list of all Toronto's neighbourhoods, 
 ### Use case : I want to find the best neighbourhood to live in 
 
 **Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
-https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/1-Toronto_Clustering_by_Venues_Categories/Toronto_Clustering_By_Venues_Categories.ipynb  
+https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/1-Toronto_Clustering_By_Venues_Categories.ipynb  
 
 **Context :** When you want to live in a city, you may be looking for a neighbourhood regarding its types of venues. 
 - For example, **if you want to go to the park everyday, you will be likely to live in a neighbourhood that containts a lot of parks**. If you love coffee shops, you may want to live in a neighbourhood that containts a lot of coffee shops.  
@@ -32,7 +32,7 @@ With this clustering method, we can see neighbourhoods that are similar using th
 ### Use case : I want to find the best area to open my new restaurant  
 
 **Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
-https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/2-Toronto_Clustering_By_Ethnic_Origins/Toronto_Clustering_By_Ethnic_Origins.ipynb      
+https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/2-Toronto_Clustering_By_Ethnic_Origins.ipynb      
 
 **Detailed report :** https://github.com/ThibautBremand/Coursera_Capstone/blob/master/Coursera_Capstone_REPORT.md  
 
