@@ -34,9 +34,9 @@ With this clustering method, we can see neighbourhoods that are similar using th
 **Note :** If you want to see all the Folium maps in this notebook, you can visualise the notebook through **nbviewer** :  
 https://nbviewer.jupyter.org/github/ThibautBremand/Coursera_Capstone/blob/master/2-Toronto_Clustering_By_Ethnic_Origins.ipynb      
 
-**Detailed report :** https://github.com/ThibautBremand/Coursera_Capstone/blob/master/Coursera_Capstone_REPORT.md  
+**Detailed report :** https://github.com/ThibautBremand/DataSce_Coursera_Capstone_Data_Science/blob/master/Coursera_Capstone_REPORT_Toronto_Clustering_By_Ethnic_Origins.md    
 
-**Presentation with slides :** https://github.com/ThibautBremand/Coursera_Capstone/blob/master/Coursera_Capstone_PRESENTATION.pdf  
+**Presentation with slides :** https://github.com/ThibautBremand/DataSce_Coursera_Capstone_Data_Science/blob/master/Coursera_Capstone_PRESENTATION_Toronto_Clustering_By_Ethnic_Origins.pdf  
 
 **Context :** This time, we will cluster the city of Toronto by demographic data, and especially by Ethnic origins, in order to find the best places to open a new restaurant.  
 - If, for example, **you want to open a new chinese restaurant in Toronto, you will be looking for areas where a lot of people of Chinese ethnic origins live**, so you will be sure that people living nearby will be interested in your new restaurant.  
